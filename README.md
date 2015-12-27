@@ -64,8 +64,8 @@ Virtualbox等、不要なものはチェックをはずすこと。
 
 - 管理者権限でPower Shellを実行
 - `docker-machine create --driver hyperv --hyperv-virtual-switch vnetext01 default`
--- vnetext01は予め外部向けの仮想Hyper-V上で作っておいたやつ
--- defaultは作成するVMの名前
+ - vnetext01は予め外部向けの仮想Hyper-V上で作っておいたやつ
+ - defaultは作成するVMの名前
 
 起動に時間がかかったからかエラーになるけれど、できているのでHyper-V上で起動。
 
