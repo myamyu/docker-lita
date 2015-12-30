@@ -44,4 +44,4 @@ fi
 bundle install
 
 log 'Run Bot!'
-lita
+/opt/lita/bundle/bin/lita

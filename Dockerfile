@@ -6,14 +6,14 @@ RUN apt-get update && \
     apt-get install -y git && \
     apt-get clean all
 
-RUN gem install lita && \
-    gem install bundler
-
-RUN mkdir /opt/lita && \
-    useradd -d /opt/lita lita && \
-    chown -R -v lita:lita /opt/lita
+RUN mkdir -p /opt/lita/bundle && \
+    useradd -d /opt/lita lita -G staff && \
+    chown -R -v lita:staff /opt/lita
 
 USER lita
+
+ENV GEM_HOME /opt/lita/bundle
+RUN gem install bundler
 
 WORKDIR /opt/lita
 VOLUME /opt/lita
